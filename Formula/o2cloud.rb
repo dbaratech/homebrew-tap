@@ -7,6 +7,11 @@ class O2cloud < Formula
   sha256 "755d43c65a8e401cf0c876382d715efb9325f410a5d4d2bae61591e4b061c35e"
   license "MIT"
 
+  livecheck do
+    url :stable
+    strategy :pypi
+  end
+
   depends_on "rust" => :build # builds pydantic-core
   depends_on "python@3.13"
 
